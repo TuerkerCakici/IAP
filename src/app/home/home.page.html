@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Devdactic IAP </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item
+      button
+      *ngFor="let p of products"
+      (click)="purchase(p)"
+      detail="false"
+    >
+      <ion-label class="ion-text-wrap">
+        {{ p.title }}
+        <p>{{ p.description }}</p>
+      </ion-label>
+      <ion-button slot="end"> {{ p.price }} {{ p.currency }} </ion-button>
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="full" (click)="restore()">{{test}}</ion-button>
+
+  <ion-item> Gems: {{ gems }} </ion-item>
+  <ion-item> Is Pro: {{ isPro }} </ion-item>
 </ion-content>

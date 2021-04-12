@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Purchase</string>
+    <string name="title_activity_main">Purchase</string>
+    <string name="package_name">com.tuerkercakici.IAP</string>
+    <string name="custom_url_scheme">com.tuerkercakici.IAP</string>
+</resources>
